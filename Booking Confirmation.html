@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Confirmation</title>
+    <link rel="stylesheet" href="Booking Confirmation.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Booking Confirmation</h1>
+        <section>
+            <h2>Booking Details</h2>
+            <ul>
+                <li>Service Details:</li>
+                <ul>
+                    <li>Flights: {{ flights }}</li>
+                    <li>Hotels: {{ hotels }}</li>
+                    <li>Rental Cars: {{ rentalCars }}</li>
+                </ul>
+                <li>Passenger Details:</li>
+                <ul>
+                    <li>Name: {{ passengerName }}</li>
+                    <li>Email: {{ passengerEmail }}</li>
+                    <li>Phone Number: {{ passengerPhone }}</li>
+                </ul>
+                <li>Payment Details:</li>
+                <ul>
+                    <li>Card Number: {{ paymentCardNumber }}</li>
+                    <li>Expiration Date: {{ paymentExpirationDate }}</li>
+                    <li>CVV: {{ paymentCVV }}</li>
+                </ul>
+            </ul>
+        </section>
+        <section>
+            <h2>Booking Confirmation</h2>
+            <p>Booking Confirmation Number: {{ bookingConfirmationNumber }}</p>
+            <p>Itinerary:</p>
+            <ul>
+                {{#itinerary}}
+                <li>{{ this }}</li>
+                {{/itinerary}}
+            </ul>
+        </section>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="Booking Confirmation.css"></script>
+</body>
+
+</html>
